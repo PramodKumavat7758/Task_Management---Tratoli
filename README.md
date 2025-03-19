@@ -11,6 +11,15 @@ A high-performance **Task Management System** built with **Django REST Framework
 - ✅ **Caching for Performance** (Redis)
 - ✅ **Fully Dockerized Deployment**
 
+## 🚀 Tech Stack
+- ✅ **Backend: Django, Django REST Framework (DRF)**
+- ✅ **Database: PostgreSQL**
+- ✅ **Asynchronous Tasks: Celery, Redis**
+- ✅ **Deployment: Docker, Gunicorn**
+- ✅ **Authentication: JWT (JSON Web Token)**
+
+
+
 
 
 ## ⚙️ Installation & Setup
@@ -19,4 +28,27 @@ A high-performance **Task Management System** built with **Django REST Framework
 ```bash
 git clone https://github.com/your-username/task-management.git
 cd task-management
+```
+
+### **2 Install Requirements**
+```bash
+pip install -r requirements.txt
+```
+### **3 Apply Migrations**
+```bash
+python manage.py migrate
+python manage.py createsuperuser
+```
+
+### **4 Run Server**
+```bash
+python manage.py runserver
+```
+
+- Open postman Api collection tool http://localhost:8080/api/tasks
+     ![Postman](tasks-postman.png)
+- Celery Logs
+      ![Celery](celery-log.png)
+- Redis Logs
+      ![Redis](redis-log.png)
 
