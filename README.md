@@ -1,6 +1,7 @@
 # 🚀 Task Management System
 
-A high-performance **Task Management System** built with **Django REST Framework**, **Celery**, **Redis**, **PostgreSQL**, **Django Channels**, and **Docker**.  
+A high-performance **Task Management System** built with **Django REST Framework**, **Celery**, **Redis**, **PostgreSQL**, **Django Channels**, and **Docker**. 
+In this I worked on following features . To use Redis you need to use WSL or Linux .
 
 ## 🌟 Features
 - ✅ **User Authentication** (JWT-based authentication)
@@ -43,6 +44,24 @@ python manage.py createsuperuser
 ### **4 Run Server**
 ```bash
 python manage.py runserver
+```
+
+### **5 Install Redis on WSL**
+```bash
+curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
+sudo chmod 644 /usr/share/keyrings/redis-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
+sudo apt-get update
+sudo apt-get install redis
+```
+### **6 Install Celery**
+
+```bash
+pip install celery
+pip install django
+# or
+pip install celery django-celery
+
 ```
 
 - Open postman Api collection tool http://localhost:8080/api/tasks
